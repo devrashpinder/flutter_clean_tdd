@@ -1,2 +1,16 @@
 # flutter_clean_tdd
-In the first part, you will have learned the core concepts of clean architecture as it pertains to Flutter and also created a bunch of empty folders for the presentation, domain and data layers inside the Number Trivia App we're building. In the second part, it's time to start filling those empty folders with code, using TDD, of course.
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
