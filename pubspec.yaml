@@ -46,14 +46,14 @@ dependencies:
   # Functional programming 
   dartz: any
   # Network connection 
-  connectivity: any
+  internet_connection_checker: ^1.0.0+1
   ## Remote API
-  http: any
+  dio: ^4.0.6
   # Local shared data
-  shared_preferences : any
+  shared_preferences: ^2.0.15
   ## JSON to Class Models
   json_annotation: ^4.7.0
-
+  
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +68,7 @@ dev_dependencies:
   mocktail: any
   json_serializable: ^6.5.4
   build_runner: any
+  mockito: ^5.0.16
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
