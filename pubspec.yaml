@@ -48,7 +48,7 @@ dependencies:
   # Network connection 
   internet_connection_checker: ^1.0.0+1
   ## Remote API
-  dio: ^4.0.6
+  http: ^0.13.5
   # Local shared data
   shared_preferences: ^2.0.15
   ## JSON to Class Models

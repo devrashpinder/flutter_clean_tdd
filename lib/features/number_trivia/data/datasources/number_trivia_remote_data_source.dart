@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:flutter_clean_tdd/features/core/error/exceptions.dart';
 import 'package:flutter_clean_tdd/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_clean_tdd/utils/constants.dart';
+import 'package:http/http.dart';
 
 abstract class NumberTriviaRemoteDataSource {
   /// Calls the http://numbersapi.com/{number} endpoint.
@@ -19,19 +19,17 @@ abstract class NumberTriviaRemoteDataSource {
 
 class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   NumberTriviaRemoteDataSourceImpl({
-    required this.dioClient,
+    required this.httpClient,
   });
 
-  final Dio dioClient;
+  final  Client httpClient;
 
   Future<NumberTriviaModel> _getTriviaFromUrl(String url) async {
-    final response = await dioClient.get(
-      url,
-      options: Options(headers: {'Content-Type': 'application/json'}),
-    );
-
+    
+    final response = await httpClient
+        .get(Uri.parse(url), headers: {'Content-Type': 'application/json'});
     if (response.statusCode == 200) {
-      return NumberTriviaModel.fromJson(json.decode(response.data));
+      return NumberTriviaModel.fromJson(json.decode(response.body));
     } else {
       throw ServerException();
     }
